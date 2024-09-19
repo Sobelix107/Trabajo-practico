@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Practicados : MonoBehaviour
 {
-     public string EvaluarValores(int valor1, int valor2, int valor3) // indicamos los 3 valores con una fincion int
+    public string EvaluarValores(int valor1, int valor2, int valor3) // indicamos los 3 valores con una fincion int
     {
         // Usamos Mathf.Max y Mathf.Min para encontrar el mayor y el menor valor
         int mayor = Mathf.Max(valor1, valor2, valor3);
@@ -34,12 +34,24 @@ public class Practicados : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        {
+            
+            int valor1 = Random.Range(-100, 100); // genera los nuemero aleatorios  
+            int valor2 = Random.Range(-100, 100);
+            int valor3 = Random.Range(-100, 100);
+
+            
+            string resultado = EvaluarValores(valor1, valor2, valor3); // ejecuta la funcion    
+
+            
+            Debug.Log("Valores generados: " + valor1 + ", " + valor2 + ", " + valor3); // la consola
+            Debug.Log("Resultado: " + resultado);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
